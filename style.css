@@ -1,0 +1,141 @@
+/* Existing Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif,'Arial', sans-serif;
+    background-color: #DCDCDC;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 5vw;
+    border-radius: 5vw;
+    box-shadow: 0vw 10vw 20vw rgba(0, 0, 0, 0.1);
+    width: 90vw;
+    text-align: center;
+    transition: background-color 1.5s ease;
+}
+
+.advice-box {
+    width: 100%;
+}
+
+.advice-title {
+    font-size: 6vw;
+    color: black;
+    margin-bottom: 5vw;
+}
+
+#advice-text {
+    font-size: 4vw;
+    color: #1D1D1D;
+    min-height: 5vh;
+    margin-bottom: 10vw;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards; /* fade-in effect */
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.advice-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 2vw 4vw;
+    border-radius: 2vw;
+    font-size: 4vw;
+    cursor: pointer;
+    transition: background-color 1.5s ease, transform 1.5s ease;
+}
+
+.advice-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.theme-toggle {
+    margin-bottom: 5vw;
+    padding: 2vw 4vw;
+    background-color: #007bff;
+    color: ghostwhite;
+    border-radius: 2vw;
+    cursor: pointer;
+    border: none;
+    font-size: 4vw;
+    transition: background-color 1.5s ease, color 1.5s ease, transform 1.5s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: black;
+}
+
+.dark-mode .app-container {
+    background-color: #1D1D1D;
+    color: ghostwhite;
+}
+
+.dark-mode .advice-title {
+    color: ghostwhite;
+}
+
+.dark-mode #advice-text {
+    color: ghostwhite;
+}
+
+.dark-mode .advice-btn {
+     background-color: black;
+     color: darkorange;
+     border: 0.5vw solid darkorange;
+}
+
+.dark-mode .advice-btn:hover {
+    background-color: darkorange;
+    color: black;
+    border: 0.5vw solid black;
+}
+
+.dark-mode .theme-toggle {
+    background-color: black;
+    color: darkorange;
+    border: 0.5vw solid darkorange;
+}
+
+/* Animation for advice fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+ /* Existing CSS styles... */
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
